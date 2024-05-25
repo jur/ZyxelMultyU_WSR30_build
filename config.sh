@@ -1,0 +1,8 @@
+DOCKERIMAGE="ubuntu1204_v1"
+CONTAINER="ubuntu1204_container_v1"
+BUILDUSER="builduser"
+IP="192.168.1.6"
+SERIALDEVICE="/dev/ttyUSB0"
+
+SRCDIR="${CONFIGDIR}/src"
+BUILDSCRIPTDIR="${CONFIGDIR}/scripts"
