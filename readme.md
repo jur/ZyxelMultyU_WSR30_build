@@ -1,5 +1,8 @@
 # Build firmware for Zyxel WSR30 MultyU AC2100
 
+## Install packages
+```sudo apt-get install sispmctl picocom docker.io```
+
 ## Automatic build
 ```./docker/build-firmware.sh```
 
@@ -15,6 +18,8 @@
 * Build firmware image: ```make```
 
 ## Serial Interface
+The serial interface is available at jumper J18:
+
 Pin   Description
 ----- -----------
 Pin 1 3.3V
