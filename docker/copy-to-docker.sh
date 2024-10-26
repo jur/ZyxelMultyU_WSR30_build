@@ -29,6 +29,7 @@ if [ ! -e "${SRCDIR}/WSR30_100ABMY13C0.tar.bz2" ]; then
 		git clone "${REPO}" || exit $?
 	fi
 	cd 100ABMY13C0 || exit $?
+	mkdir -p "${SRCDIR}" || exit $?
 	git archive  --format=tar -o "${SRCDIR}/WSR30_100ABMY13C0.tar" "${TAG}" || exit $?
 	bzip2 "${SRCDIR}/WSR30_100ABMY13C0.tar"
 fi
