@@ -30,7 +30,7 @@ if [ ! -e "${SRCDIR}/WSR30_100ABMY13C0.tar.bz2" ]; then
 	fi
 	cd 100ABMY13C0 || exit $?
 	mkdir -p "${SRCDIR}" || exit $?
-	git archive  --format=tar -o "${SRCDIR}/WSR30_100ABMY13C0.tar" "${TAG}" || exit $?
+	git archive  --format=tar --prefix="100ABMY13C0/" -o "${SRCDIR}/WSR30_100ABMY13C0.tar" "${TAG}" || exit $?
 	bzip2 "${SRCDIR}/WSR30_100ABMY13C0.tar"
 fi
 docker cp "${SRCDIR}/WSR30_100ABMY13C0.tar.bz2" ${CONTAINER}:/home/${BUILDUSER}/
