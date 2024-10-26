@@ -7,4 +7,4 @@ cd "${BASEDIR}" || exit $?
 CONFIGDIR="$(dirname "${SCRIPTDIR}")"
 source "${CONFIGDIR}/config.sh"
 
-docker build --network="host" -t "${DOCKERIMAGE}" .
+docker build --network="host" -t "${DOCKERIMAGE}" "${SCRIPTDIR}"
