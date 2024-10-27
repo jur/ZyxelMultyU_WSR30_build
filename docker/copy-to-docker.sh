@@ -8,7 +8,7 @@ CONFIGDIR="$(dirname "${SCRIPTDIR}")"
 source "${CONFIGDIR}/config.sh"
 
 REPO="git@github.com:jur/100ABMY13C0.git"
-TAG="5b0e833de463acd3194c5e9527e9c0066ec7b54d"
+TAG="ce634c2d9579a85fcb57ef84a8a18ba5c64cbcb4"
 
 IMGHASH="$(docker images -q "${DOCKERIMAGE}")"
 if [ "${IMGHASH}" = "" ]; then
