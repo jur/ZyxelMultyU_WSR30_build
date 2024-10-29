@@ -7,18 +7,9 @@ cd "${BASEDIR}" || exit $?
 CONFIGDIR="${SCRIPTDIR}"
 SCRIPTDIR="${SCRIPTDIR}/scripts"
 source "${CONFIGDIR}/config.sh"
+source "${SCRIPTDIR}/tools.sh"
 
 FWFILE="${1:-fw.bin}"
-
-target_power_on()
-{
-	sudo sispmctl -o 4
-}
-
-target_power_off()
-{
-	sudo sispmctl -f 4
-}
 
 if [ ! -e "${FWFILE}" ]; then
 	echo >&2 "Error: Firmware file ${FWFILE} missing."

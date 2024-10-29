@@ -1,7 +1,8 @@
 # Build firmware for Zyxel WSR30 MultyU AC2100
 
 ## Install packages
-```sudo apt-get install sispmctl picocom```
+```sudo apt-get update || exit $?
+sudo apt-get install -y gcc-mips-linux-gnu sispmctl picocom make tftp || exit $?```
 Install docker as described on:
 https://docs.docker.com/engine/install/
 Docker needs to be installed for the user which is used for building.
